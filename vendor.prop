@@ -1,2 +1,6 @@
 ## Bluetooth
 bluetooth.device.default_name=Galaxy M21
+
+## Fingerpint
+ro.vendor.fingerprint.type=rear
+ro.vendor.fingerprint.supports_gestures=true
