@@ -15,27 +15,22 @@
 #
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/m21/device.mk)
+$(call inherit-product, device/samsung/m30s/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ## Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Client-id base
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-# Build fingerprint
-BUILD_FINGERPRINT := "samsung/m21nsxx/m21:12/SP1A.210812.016/M215FXXU3CWB1:user/release-keys"
-PRODUCT_BUILD_PROP_OVERRIDES += \
-	PRIVATE_BUILD_DESC="m21nsxx-user 12 SP1A.210812.016 M215FXXU3CWB1 release-keys"
-
 ## Device configuration
-PRODUCT_NAME := lineage_m21
-PRODUCT_DEVICE := m21
+PRODUCT_NAME := lineage_m30s
+PRODUCT_DEVICE := m30s
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-M215F
+PRODUCT_MODEL := SM-M307F
 PRODUCT_MANUFACTURER := samsung
 
 TARGET_BOOT_ANIMATION_RES := 1080

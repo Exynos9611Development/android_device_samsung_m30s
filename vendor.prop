@@ -1,5 +1,5 @@
 ## Bluetooth
-bluetooth.device.default_name=Galaxy M21
+bluetooth.device.default_name=Galaxy M30s
 
 ## Fingerpint
 ro.vendor.fingerprint.type=rear

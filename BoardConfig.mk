@@ -14,24 +14,33 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/m21
+DEVICE_PATH := device/samsung/m30s
 
 # Inherit from the common tree
 include device/samsung/universal9611-common/BoardConfigCommon.mk
 # Inherit optional vendor BoardConfig
--include vendor/samsung/m21/BoardConfigVendor.mk
+-include vendor/samsung/m30s/BoardConfigVendor.mk
 
 # OTA Asserts
-TARGET_OTA_ASSERT_DEVICE := m21,m21dd,m21nsxx
+TARGET_OTA_ASSERT_DEVICE := m307f,m307fn,m30s,m30sdd
 
 ## Partitions Sizes
-BOARD_BOOTIMAGE_PARTITION_SIZE := 61865984
+BOARD_BOOTIMAGE_PARTITION_SIZE := 57671680
+BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800
+BOARD_DTBIMG_PARTITION_SIZE := 8388608
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 71106560
-BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
+BOARD_FLASH_BLOCK_SIZE := 4096
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67633152
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5033164800
+BOARD_VENDORIMAGE_PARTITION_SIZE := 629145600
 
-## Filesystem config
-include device/samsung/universal9611-common/fsconfig_dynamic.mk
+## Partitions
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_PRODUCT := system/product
+TARGET_COPY_OUT_SYSTEM := system
+TARGET_COPY_OUT_VENDOR := vendor
 
 ## Prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop

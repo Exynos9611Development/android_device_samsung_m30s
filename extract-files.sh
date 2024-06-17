@@ -22,7 +22,7 @@ fi
 
 set -e
 
-export DEVICE=m21
+export DEVICE=m30s
 export DEVICE_COMMON=universal9611-common
 export VENDOR=samsung
 
